@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="class_form_view" model="ir.ui.view">
+            <field name="name">class.form.view</field>
+            <field name="model">ev.class</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group string="Class">
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="class_tree_view" model="ir.ui.view">
+            <field name="name">class.tree.view</field>
+            <field name="model">ev.class</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ev_class_action" model="ir.actions.act_window">
+            <field name="name">Class</field>
+            <field name="res_model">ev.class</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="semester_form_view" model="ir.ui.view">
+            <field name="name">semester.form.view</field>
+            <field name="model">ev.semester</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group string="Semester">
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="semester_tree_view" model="ir.ui.view">
+            <field name="name">semester.tree.view</field>
+            <field name="model">ev.semester</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ev_semester_action" model="ir.actions.act_window">
+            <field name="name">Semester</field>
+            <field name="res_model">ev.semester</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="section_form_view" model="ir.ui.view">
+            <field name="name">section.form.view</field>
+            <field name="model">ev.section</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group string="Section">
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="section_tree_view" model="ir.ui.view">
+            <field name="name">section.tree.view</field>
+            <field name="model">ev.section</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ev_section_action" model="ir.actions.act_window">
+            <field name="name">Section</field>
+            <field name="res_model">ev.section</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

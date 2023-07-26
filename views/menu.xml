@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="ev_student_info_root"
+        name="Student Info"
+        sequence="6"
+    />
+    <menuitem
+        id="students"
+        name="Students"
+        parent="ev_student_info_root"
+        sequence="9"
+        action="ev_student_info_action"
+    />
+    <menuitem
+        id="teachers"
+        name="Teachers"
+        parent="ev_student_info_root"
+        sequence="10"
+        action="ev_teacher_action"
+    />
+    <menuitem
+        id="subject"
+        name="Subjects"
+        parent="ev_student_info_root"
+        sequence="10"
+        action="ev_subject_action"
+    />
+    <menuitem
+        id="class_semester_section_root"
+        name="Class, Semester and Section"
+        parent="ev_student_info_root"
+        sequence="10"
+    />
+    <menuitem
+        id="class"
+        name="Class"
+        parent="class_semester_section_root"
+        sequence="10"
+        action="ev_class_action"
+    />
+    <menuitem
+        id="semester"
+        name="Semester"
+        parent="class_semester_section_root"
+        sequence="10"
+        action="ev_semester_action"
+    />
+    <menuitem
+        id="section"
+        name="Section"
+        parent="class_semester_section_root"
+        sequence="10"
+        action="ev_section_action"
+    />
+</odoo>

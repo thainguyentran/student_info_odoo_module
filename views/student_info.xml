@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="students_form_view" model="ir.ui.view">
+            <field name="name">students.form.view</field>
+            <field name="model">ev.student.info</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" attrs="{'readonly': [('name', '!=', False),('roll_number', '!=', False)]}"/>
+                        </h1>
+                    </div>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                        </group>
+                        <group string="Personal Info">
+                            <group>
+                                <field name="father_name" />
+                                <field name="email" />
+                                <field name="phone_number" />
+                            </group>
+                        </group>
+                        <group string="Academic Info">
+                            <group>
+                                <field name="roll_number" />
+                                <button string="Create Roll Number" type="object" name="generate_roll_number" class="oe_highlight" attrs="{'invisible': [('roll_number', '!=', False)]}" />
+                                <label for="student_class" string="Class - Semester"/>
+                                <div>
+                                    <field name="student_class" class="oe_inline"/> - <field name="semester" class="oe_inline"/>
+                                </div>
+                                <field name="section" />
+                            </group>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="First Assessment">
+                            <field name="first_assessment_line_ids">
+                                <tree editable="bottom">
+                                    <field name="subject_id"/>
+                                    <field name="teacher_id"/>
+                                    <field name="total_marks"/>
+                                    <field name="obtained_marks"/>
+                                    <field name="percentage" widget="percentage"/>
+                                    <field name="grade"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="fa_overall_grade"/>
+                                <field name="fa_total_obtained_marks"/>
+                                <field name="fa_total_percentage" widget="percentage"/>
+                            </group>
+                        </page>
+                        <page string="Second Assessment">
+                            <field name="second_assessment_line_ids">
+                                <tree editable="bottom">
+                                    <field name="subject_id"/>
+                                    <field name="teacher_id"/>
+                                    <field name="total_marks"/>
+                                    <field name="obtained_marks"/>
+                                    <field name="percentage" widget="percentage"/>
+                                    <field name="grade"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="sa_overall_grade"/>
+                                <field name="sa_total_obtained_marks"/>
+                                <field name="sa_total_percentage" widget="percentage"/>
+                            </group>
+                        </page>
+                        <page string="Final Exam">
+                            <field name="final_exam_line_ids">
+                                <tree editable="bottom">
+                                    <field name="subject_id"/>
+                                    <field name="teacher_id"/>
+                                    <field name="total_marks"/>
+                                    <field name="obtained_marks"/>
+                                    <field name="percentage" widget="percentage"/>
+                                    <field name="grade"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="fe_overall_grade"/>
+                                <field name="fe_total_obtained_marks"/>
+                                <field name="fe_total_percentage" widget="percentage"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="students_tree_view" model="ir.ui.view">
+            <field name="name">students.tree.view</field>
+            <field name="model">ev.student.info</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="roll_number"/>
+                    <field name="student_class"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ev_student_info_action" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">ev.student.info</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

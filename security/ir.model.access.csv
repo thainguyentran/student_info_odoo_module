@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ev_student_info_type_full,Full access on Student Info,model_ev_student_info,,1,1,1,1
+access_ev_teacher_type_full,Full access on Teacher,model_ev_teacher,,1,1,1,1
+access_ev_first_assessment_line_items_type_full,Full access on First Assessment Line Item,model_ev_first_assessment_line_items,,1,1,1,1
+access_ev_second_assessment_line_items_type_full,Full access on Second Assessment Line Item,model_ev_second_assessment_line_items,,1,1,1,1
+access_ev_final_exam_line_items_type_full,Full access on Final Exam Line Item,model_ev_final_exam_line_items,,1,1,1,1
+access_ev_section_type_full,Full access on Section,model_ev_section,,1,1,1,1
+access_ev_class_type_full,Full access on Class,model_ev_class,,1,1,1,1
+access_ev_semester_type_full,Full access on Semester,model_ev_semester,,1,1,1,1
+access_ev_subject_type_full,Full access on Subject,model_ev_subject,,1,1,1,1
+
