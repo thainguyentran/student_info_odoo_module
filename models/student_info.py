@@ -36,7 +36,7 @@ class StudentInfo(models.Model):
     
     def generate_roll_number(self):
         _logger.debug("Class: %s SEMESTER %s SECTION %s", self.student_class.name, self.semester.name, self.section.name)
-        if not self.student_class or not self.semester or not self.section:
+        if not self.student_class or self.semester or self.section:
             raise UserError(_("Please select Class, Semester and Section First"))
         self.roll_number =  str(self.student_class.name) + "-" + str(self.section.name) + "-" + self.env['ir.sequence'].next_by_code('ev.rn.seq')
         
