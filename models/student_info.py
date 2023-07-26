@@ -35,8 +35,8 @@ class StudentInfo(models.Model):
     section = fields.Many2one('ev.section', string='Section', required=True)
     
     def generate_roll_number(self):
-        _logger.debug("CUSTOMER AC %s XXXX %s YYYYY %s", self.student_class, self.semester, self.section)
-        if not self.student_class or self.semester or self.section:
+        _logger.debug("CUSTOMER AC %s XXXX %s YYYYY %s", self.student_class.name, self.semester.name, self.section.name)
+        if not self.student_class or not self.semester or not self.section:
             raise UserError(_("Please select Class, Semester and Section First"))
         self.roll_number =  str(self.student_class.name) + "-" + str(self.section.name) + "-" + self.env['ir.sequence'].next_by_code('ev.rn.seq')
         
