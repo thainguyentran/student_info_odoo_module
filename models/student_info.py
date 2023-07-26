@@ -1,6 +1,5 @@
 from odoo import api, fields, models
 from odoo.exceptions import UserError
-from assessments import get_grade
 import logging
 
 _logger = logging.getLogger(__name__)
